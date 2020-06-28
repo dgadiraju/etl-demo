@@ -1,7 +1,9 @@
 from util import get_connection
+from loguru import logger
 
 
 def read_table(db_details, table_name, limit=0):
+    logger.info(db_details)
     connection = get_connection(db_type=db_details['DB_TYPE'],
                                 db_host=db_details['DB_HOST'],
                                 db_name=db_details['DB_NAME'],
