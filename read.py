@@ -8,7 +8,7 @@ def get_column_names(cursor, db_type):
     elif db_type == 'postgres':
         column_names = []
         for column_name in cursor.description:
-            column_names.append(column_name)
+            column_names.append(column_name[0])
     return column_names
 
 
