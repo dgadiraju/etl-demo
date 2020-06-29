@@ -8,16 +8,17 @@ from write import write_df_to_file
 
 
 def init_logger():
-    logger.add("data-copier.info",
+    logger.add("etl-demo.info",
                rotation="1 MB",
                retention="10 days",
                level="INFO"
                )
-    logger.add("data-copier.err",
+    logger.add("etl-demo.err",
                rotation="1 MB",
                retention="10 days",
                level="ERROR"
                )
+
 
 def main():
     env = sys.argv[1]
@@ -29,7 +30,6 @@ def main():
     data, column_names = read_table(db_details, a_table)
     df = pd.DataFrame(data, columns=column_names)
     write_df_to_file('/tmp', table_name=a_table, df=df)
-
 
 
 if __name__ == '__main__':
