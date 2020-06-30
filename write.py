@@ -44,4 +44,4 @@ def load_table(db_details, data, column_names, table_name):
 
 def write_df_to_file(base_dir, table_name, df):
     file_path = f'{base_dir}/{table_name}/data-00000'
-    df.to_csv(file_path)
+    df.to_csv(file_path, index=False)
