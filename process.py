@@ -12,4 +12,5 @@ def join_data():
         groupby('customer_id')['customer_id']. \
         agg(['count']). \
         rename(columns={'count': 'order_count'})
-    return order_count_by_customer
+    order_count_by_customer.to_csv('/tmp/join_orders_and_customers/data-00000')
+    return
