@@ -14,3 +14,7 @@ def join_data():
         rename(columns={'count': 'order_count'})
     order_count_by_customer.to_csv('/tmp/join_orders_and_customers/data-00000')
     return
+
+
+if __name__ == '__main__':
+    join_data()
