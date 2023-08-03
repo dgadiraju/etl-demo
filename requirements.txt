@@ -1,4 +1,4 @@
 pandas==1.0.4
 mysql-connector-python==8.0.20
 psycopg2-binary==2.8.5
-loguru==0.5.1
+loguru==0.5.3
